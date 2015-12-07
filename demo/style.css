@@ -1,0 +1,25 @@
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin: 10px;
+    float: left;
+}
+
+.size-selector-option {
+    border: 1px solid;
+    padding: 10px;
+    min-width: 45px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.size-selector-option:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.selected .size-selector-option {
+    border-color: red;
+}
