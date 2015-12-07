@@ -1,6 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const {SizePicker} = require('../dist/index.js');
+const {ExtendedSelect} = require('../dist/index.js');
 
 class Demo extends React.Component {
   constructor(props) {
@@ -20,10 +20,10 @@ class Demo extends React.Component {
     return (
         <div>
           <div id='sizePicker'>
-            <SizePicker
-                sizes={this.state.sizes}
-                onSizeSelected={(size) => this.sizeSelected(size)}
-                selectedSize={this.state.selectedSize || 'M'}
+            <ExtendedSelect
+                options={this.state.sizes}
+                onOptionSelected={(size) => this.sizeSelected(size)}
+                selectedOption={this.state.selectedSize || 'M'}
             />
           </div>
         </div>

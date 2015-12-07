@@ -1,8 +1,8 @@
 import React from 'react';
 
 const propTypes = {
-  size: React.PropTypes.string.isRequired,
-  selectedSize: React.PropTypes.string,
+  option: React.PropTypes.string.isRequired,
+  selectedOption: React.PropTypes.string,
   onSelect: React.PropTypes.func
 };
 
@@ -12,20 +12,20 @@ export default class SizePicker extends React.Component {
   }
 
   render() {
-    const { size, onSelect, selectedSize } = this.props;
+    const { option, onSelect, selectedOption } = this.props;
 
     let classes = [];
 
-    if (selectedSize === size) {
+    if (selectedOption === option) {
       classes.push('selected');
     }
 
     return (
         <li
-            onClick={() => onSelect(size)}
+            onClick={() => onSelect(option)}
             className={classes.join(' ')}>
           <div className='size-selector-option'>
-            {size}
+            {option}
           </div>
         </li>
     );

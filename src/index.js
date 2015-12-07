@@ -1,2 +1,2 @@
-export { default as SizePickerOption } from './SizePickerOption';
-export { default as SizePicker } from './SizePicker';
+export { default as SelectOption } from './SelectOption';
+export { default as ExtendedSelect } from './ExtendedSelect';
