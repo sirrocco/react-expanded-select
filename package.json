@@ -4,8 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel src --out-dir dist &&  browserify -t [reactify --es6] demo\\main.js -o demo\\demo.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel src --out-dir dist && browserify -t [reactify --es6] demo\\main.js -o demo\\demo.js",
+    "test": "set BABEL_JEST_STAGE=0 && jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/src",
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -25,7 +35,10 @@
     "reactify": "^1.1.1"
   },
   "devDependencies": {
+    "babel-jest": "^6.0.1",
     "eslint-config-airbnb": "^1.0.2",
-    "eslint-plugin-react": "^3.11.2"
+    "eslint-plugin-react": "^3.11.2",
+    "jest-cli": "^0.8.0",
+    "react-addons-test-utils": "^0.14.3"
   }
 }

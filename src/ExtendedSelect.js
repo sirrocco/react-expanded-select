@@ -9,6 +9,9 @@ const propTypes = {
 
 const defaultProps = {};
 
+const noOp = function() {
+};
+
 export default class SizePicker extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +19,7 @@ export default class SizePicker extends React.Component {
 
   optionSelected(option) {
     const {onOptionSelected} = this.props;
-    onOptionSelected(option);
+    (onOptionSelected || noOp)(option);
   }
 
   render() {
