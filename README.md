@@ -15,6 +15,10 @@ The available properties are:
   3. run `npm start`
   4. open /demo/index.html
 
+## To run the unit tests:
+
+  `npm test`
+
 ## TODO
 
   Refactor a bit into an npm package
